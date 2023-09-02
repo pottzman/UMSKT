@@ -168,6 +168,7 @@ int CLI::parseCommandLine(int argc, char* argv[], Options* options) {
             for (; *p; p++) {
                 *p = toupper((unsigned char)*p);
 	    }
+            *p = &mode[0];
             if (strcmp(p, "WINDOWS") == 0) {
                 options->activationMode = WINDOWS;
 	    } else if (strcmp(p, "OFFICEXP") == 0) {
